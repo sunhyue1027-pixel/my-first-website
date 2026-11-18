@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 첫 번째 웹사이트</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333; padding: 16px;
+    }
+    .card {
+      background: #fff; border-radius: 20px; padding: 48px 32px;
+      max-width: 480px; width: 100%; text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+    .emoji { font-size: 64px; margin-bottom: 16px; }
+    h1 { font-size: 28px; margin-bottom: 12px; color: #4c3a99; }
+    p { font-size: 16px; line-height: 1.7; color: #666; margin-bottom: 28px; }
+    .btn {
+      display: inline-block; padding: 12px 28px; border-radius: 999px;
+      background: #667eea; color: #fff; text-decoration: none; font-weight: 600;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #4c3a99; }
+    footer { margin-top: 32px; font-size: 13px; color: #aaa; }
+    @media (max-width: 480px) {
+      .card { padding: 36px 20px; }
+      h1 { font-size: 22px; }
+      .emoji { font-size: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="emoji">👋</div>
+    <h1>환영합니다!</h1>
+    <p>나의 첫 번째 웹사이트에 오신 것을 환영해요.<br>
+       Claude Code와 GitHub Pages로 만들고 배포했습니다.</p>
+    <a class="btn" href="https://github.com/sunhyue1027-pixel/my-first-website">GitHub 저장소 보기</a>
+    <footer>© 2026 sunhyue1027-pixel</footer>
+  </main>
+</body>
+</html>
