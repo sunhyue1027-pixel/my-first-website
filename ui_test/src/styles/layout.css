@@ -1,0 +1,11 @@
+/* 레이아웃 관련 스타일 */
+.page-header {
+  padding: 48px 0 24px;
+}
+
+.section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 64px;
+}

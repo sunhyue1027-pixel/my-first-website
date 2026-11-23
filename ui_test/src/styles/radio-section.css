@@ -1,0 +1,22 @@
+/* Radio 섹션: 왼쪽 라디오 목록 + 오른쪽 결과 (좁은 화면에서는 위아래) */
+.radio-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.radio-result {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 600px) {
+  .radio-layout {
+    grid-template-columns: 1fr;
+  }
+}

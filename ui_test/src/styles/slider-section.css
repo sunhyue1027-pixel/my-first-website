@@ -1,0 +1,28 @@
+/* Slider 섹션: 왼쪽 현재 값 + 오른쪽 슬라이더 (좁은 화면에서는 위아래) */
+.slider-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.slider-value {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* 양 끝 marks 라벨(0, 100)이 잘리지 않도록 좌우 여백 */
+.slider-control {
+  padding: 0 12px;
+}
+
+@media (max-width: 600px) {
+  .slider-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

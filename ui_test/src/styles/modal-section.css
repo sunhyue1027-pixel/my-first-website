@@ -1,0 +1,13 @@
+/* Modal 섹션 */
+.modal-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal-result {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.04);
+}

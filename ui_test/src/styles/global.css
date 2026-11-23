@@ -1,0 +1,14 @@
+/* 전역 스타일 — MUI CssBaseline 위에 덧붙이는 최소한의 설정 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}

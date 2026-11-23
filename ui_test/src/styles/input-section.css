@@ -1,0 +1,30 @@
+/* Input 섹션: variant별 입력 필드를 3열로 배치 (좁은 화면에서는 1열) */
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.input-grid__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-grid__preview {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.04);
+  min-height: 52px;
+}
+
+/* 긴 입력값도 칸 밖으로 넘치지 않게 줄바꿈 */
+.input-grid__value {
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+}

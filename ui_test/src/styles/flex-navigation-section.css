@@ -1,0 +1,103 @@
+/* ============================================
+   Flex Navigation 섹션 — flexbox 레이아웃
+   ============================================ */
+
+/* 큰 네비게이션 박스: 가로 전체, 높이 60px */
+.flex-nav {
+  display: flex;
+  justify-content: space-between; /* 로고 박스 ↔ 메뉴 박스를 양 끝으로 */
+  align-items: center; /* 세로 가운데 정렬 */
+  width: 100%;
+  height: 60px;
+  padding: 0 24px;
+  background-color: #2d3748;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 1. 로고 박스 */
+.flex-nav__logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* 2. 메뉴들 박스: 항목을 가로로, 15px 간격 */
+.flex-nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none; /* ul 기본 점(•) 제거 */
+}
+
+/* 메뉴 항목 */
+.flex-nav__link {
+  display: block;
+  padding: 6px 4px;
+  color: #cbd5e0; /* 연한 회색 */
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* 호버 시 흰색 */
+.flex-nav__link:hover,
+.flex-nav__link:focus-visible {
+  color: #ffffff;
+}
+
+/* 키보드 포커스 표시 */
+.flex-nav__link:focus-visible {
+  outline: 2px solid #90cdf4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 현재 선택된 메뉴: 흰색 + 아래 강조선 */
+.flex-nav__link--active {
+  color: #ffffff;
+  border-bottom-color: #63b3ed;
+}
+
+/* ── 학습용: 박스 구조 보기 ── */
+.flex-nav--outline {
+  outline: 2px dashed #f6ad55;
+  outline-offset: 3px;
+}
+
+.flex-nav--outline .flex-nav__logo,
+.flex-nav--outline .flex-nav__menu {
+  outline: 2px dashed #68d391;
+  outline-offset: 4px;
+}
+
+.flex-nav--outline .flex-nav__menu > li {
+  outline: 1px dashed #90cdf4;
+}
+
+/* ── 좁은 화면: 글자/간격을 줄이고, 그래도 넘치면 메뉴만 가로 스크롤 ── */
+@media (max-width: 600px) {
+  .flex-nav {
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .flex-nav__logo {
+    font-size: 18px;
+  }
+
+  .flex-nav__menu {
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .flex-nav__link {
+    font-size: 14px;
+  }
+}

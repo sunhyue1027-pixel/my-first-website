@@ -27,3 +27,6 @@ Thumbs.db
 # 7. 로그 파일
 *.log
 npm-debug.log*
+
+# 8. 별도 저장소로 관리하는 프로젝트
+my-portfolio/

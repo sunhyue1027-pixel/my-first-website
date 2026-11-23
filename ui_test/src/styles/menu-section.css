@@ -1,0 +1,32 @@
+/* Menu 섹션 */
+.menu-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu-result {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 200px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.menu-result__value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 메뉴가 열리면 버튼의 화살표가 위로 뒤집힘 */
+.menu-arrow {
+  transition: transform 0.2s ease;
+}
+
+.menu-arrow--open {
+  transform: rotate(180deg);
+}

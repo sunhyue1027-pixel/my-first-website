@@ -1,0 +1,77 @@
+/* Drag & Drop 섹션 */
+.dnd-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* 드롭 영역 */
+.dnd-zone {
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  padding: 12px;
+  border: 2px dashed rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.02);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* 피드백: 아이템이 영역 위에 올라왔을 때 */
+.dnd-zone--over {
+  border-color: #1976d2;
+  border-style: solid;
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+.dnd-zone__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.dnd-zone__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.dnd-zone__empty {
+  margin: auto;
+  /* 안내 문구 위로 드래그해도 영역 이벤트가 끊기지 않도록 */
+  pointer-events: none;
+}
+
+/* 드래그 가능한 아이템 */
+.dnd-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: grab;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.dnd-item:hover {
+  transform: translateY(-1px);
+}
+
+.dnd-item:active {
+  cursor: grabbing;
+}
+
+/* 피드백: 끌고 있는 아이템의 원래 자리 */
+.dnd-item--dragging {
+  opacity: 0.4;
+  border: 1px dashed #1976d2;
+}
+
+@media (max-width: 600px) {
+  .dnd-board {
+    grid-template-columns: 1fr;
+  }
+}

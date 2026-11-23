@@ -1,0 +1,21 @@
+/* Button 섹션: color(행) × variant(열) 표 형태 배치 */
+.button-grid {
+  display: grid;
+  grid-template-columns: 80px repeat(3, 1fr);
+  gap: 12px 16px;
+  align-items: center;
+}
+
+.button-grid__label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* 좁은 화면에서는 라벨 열을 줄입니다 */
+@media (max-width: 480px) {
+  .button-grid {
+    grid-template-columns: 64px repeat(3, 1fr);
+    gap: 8px;
+  }
+}

@@ -1,0 +1,123 @@
+/* ============================================
+   Swipe 섹션
+   ============================================ */
+
+/* 보이는 창: 한 번에 슬라이드 1장만 보이도록 넘치는 부분 숨김 */
+.swipe-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: grab;
+  user-select: none; /* 마우스로 끌 때 글자가 선택되지 않게 */
+  touch-action: pan-y; /* 세로 스크롤은 브라우저에 맡기고, 가로 제스처만 처리 */
+}
+
+.swipe-viewport--dragging {
+  cursor: grabbing;
+}
+
+.swipe-viewport:focus-visible {
+  outline: 3px solid #1976d2;
+  outline-offset: 2px;
+}
+
+/* 슬라이드를 가로로 이어 붙인 띠 */
+.swipe-track {
+  display: flex;
+}
+
+.swipe-slide {
+  flex: 0 0 100%;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.swipe-slide__emoji {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.swipe-slide__title {
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* 오른쪽 위 번호 */
+.swipe-counter {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 좌우 이전/다음 버튼 */
+.swipe-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.swipe-nav:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.swipe-nav.Mui-disabled {
+  color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.swipe-nav--prev {
+  left: 12px;
+}
+
+.swipe-nav--next {
+  right: 12px;
+}
+
+/* 점(dot) 표시 */
+.swipe-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.swipe-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.swipe-dot--active {
+  width: 24px;
+  background-color: #1976d2;
+}
+
+.swipe-status {
+  margin-top: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 480px) {
+  .swipe-slide {
+    height: 200px;
+  }
+}

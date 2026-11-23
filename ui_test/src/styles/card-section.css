@@ -1,0 +1,11 @@
+/* Card 섹션: CardMedia 영역 (그라데이션 + 가운데 아이콘) */
+.card-media {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-media__icon {
+  color: rgba(255, 255, 255, 0.9);
+}

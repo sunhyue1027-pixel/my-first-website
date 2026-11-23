@@ -1,0 +1,15 @@
+/* Navigation 섹션 */
+.nav-preview {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 모바일 Drawer 메뉴 */
+.nav-drawer {
+  width: 240px;
+}
+
+.nav-drawer__title {
+  padding: 16px;
+  font-weight: 700;
+}
